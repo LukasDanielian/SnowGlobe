@@ -27,6 +27,16 @@ void draw()
   cameraPos.z = cos(theta) * width * 2;
   camera(cameraPos.x, cameraPos.y, cameraPos.z, centerPos.x, centerPos.y, centerPos.z, 0, 1, 0);
   spotLight(255, 255, 255, cameraPos.x, cameraPos.y, cameraPos.z, -sin(theta) , -sin(theta), -cos(theta), PI/2, 1);
+  
+  pushMatrix();
+  rotateY(theta);
+  rotateX(-sin(theta)/2);
+  noFill();
+  stroke(255);
+  strokeWeight(1);
+  circle(0,0,width * 1.04);
+  noStroke();
+  popMatrix();
 
   for (int i = 0; i < 10; i++)
     snow.add(new Snow());
