@@ -25,7 +25,6 @@ void draw()
   cameraPos.x = sin(theta) * width * 2;
   cameraPos.z = cos(theta) * width * 2;
   camera(cameraPos.x, cameraPos.y, cameraPos.z, centerPos.x, centerPos.y, centerPos.z, 0, 1, 0);
-
   spotLight(255, 255, 255, cameraPos.x, cameraPos.y, cameraPos.z, -sin(theta % TWO_PI) , 0, -cos(theta % TWO_PI), PI/2, 1);
 
   for (int i = 0; i < 10; i++)
@@ -51,42 +50,42 @@ void renderSnowman()
 {
   pushMatrix();
   //Base
-  translate(centerPos.x, centerPos.y + width/2 - 400, centerPos.z);
-  fill(255);
-  sphere(400);
-
-  //Middle
-  translate(0, -600, 0);
-  sphere(300);
-  fill(#311515);
-  box(1200, 20, 20);
-
-  //Buttons
-  pushMatrix();
-  translate(0, 0, 300);
-  fill(0);
-  sphere(20);
-  translate(0, 100, 0);
-  sphere(20);
-  translate(0, -200, 0);
-  sphere(20);
-  popMatrix();
-
-  //Top
-  translate(0, -450, 0);
+  translate(centerPos.x, centerPos.y + width/2 - 200, centerPos.z);
   fill(255);
   sphere(200);
 
+  //Middle
+  translate(0, -300, 0);
+  sphere(150);
+  fill(#311515);
+  box(600, 10, 10);
+
+  //Buttons
+  pushMatrix();
+  translate(0, 0, 150);
+  fill(0);
+  sphere(10);
+  translate(0, 50, 0);
+  sphere(10);
+  translate(0, -100, 0);
+  sphere(10);
+  popMatrix();
+
+  //Top
+  translate(0, -225, 0);
+  fill(255);
+  sphere(100);
+
   //Face
   pushMatrix();
-  translate(0, 0, 200);
+  translate(0, 0, 100);
   fill(#CB6D15);
-  box(20, 20, 100);
-  translate(-60, -50, 0);
+  box(10, 10, 50);
+  translate(-30, -25, 0);
   fill(0);
-  sphere(20);
-  translate(120, 0, 0);
-  sphere(20);
+  sphere(10);
+  translate(60, 0, 0);
+  sphere(10);
   popMatrix();
   popMatrix();
 }
