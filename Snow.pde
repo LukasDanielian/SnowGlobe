@@ -25,7 +25,6 @@ class Snow
     rotateY(frameCount * .01);
     rotateZ(frameCount * .01);
     fill(255);
-    noStroke();
     box(size, 1, 1);
     box(1, size, 1);
     box(1, 1, size);
