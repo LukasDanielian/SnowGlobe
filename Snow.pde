@@ -5,7 +5,7 @@ class Snow
 
   public Snow()
   {
-    size = random(10, 15);
+    size = random(15, 25);
     vel = new PVector(random(-1, 1), random(5, 10), random(-1, 1));
     float dist;
 

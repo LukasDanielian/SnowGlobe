@@ -14,7 +14,7 @@ void setup()
   noStroke();
 
   centerPos = new PVector(0, 0, 0);
-  cameraPos = new PVector(sin(frameCount * .01) * width, 0, cos(frameCount * .01) * width);
+  cameraPos = new PVector(0,0,0);
   snow = new ArrayList<Snow>();
 }
 
@@ -32,8 +32,8 @@ void draw()
   rotateY(theta);
   rotateX(-sin(theta)/2);
   noFill();
-  stroke(255);
-  strokeWeight(1);
+  stroke(100);
+  strokeWeight(3);
   circle(0,0,width * 1.04);
   noStroke();
   popMatrix();
